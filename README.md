@@ -240,7 +240,7 @@ we provide the following script to reformat the `.cns` file from CNVKit into a `
 Usage:
 `./scripts/convert_cns_to_bed.py your_CNVKit_output/your_sample.cns`
 
-This will output a bed file which can be fed into AmpliconSuite-pipeline. 
+This will output two bed files, one ending with **_uncorr_CN.bed** and the other with **_ESTIMATED_PLOIDY_CORRECTED_CN.bed**. The **_uncorr_CN.bed** should be fed into AmpliconSuite-pipeline, or `seed_trimmer.py`. **_ESTIMATED_PLOIDY_CORRECTED_CN.bed** is optional and should be used with more caution.
 
    ### - `cycles_to_bed.py`
 Requires `intervaltree` python package pre-installed. Write an AA cycles file as a series of bed files, one for each decomposition. Segments are merged and sorted, and order and orientation of segments is lost.
